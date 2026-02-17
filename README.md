@@ -47,7 +47,7 @@ add_executable(my_app main.cpp)
 target_link_libraries(my_app PRIVATE print_debug)
 
 # Set debug levels: RELEASE_LEVEL=1 (ERROR only), DEBUG_LEVEL=3 (INFO)
-define_print_debug_level_for_target(my_app 1 3)
+define_print_debug_level_for_target(my_app ${PRINT_DEBUG_LEVEL_ERROR} ${PRINT_DEBUG_LEVEL_INFO})
 ```
 
 The function takes three arguments:
